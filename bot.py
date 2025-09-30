@@ -2,6 +2,8 @@ import discord
 import os
 from dotenv import load_dotenv
 from discord.ext import commands
+from keep_alive import keep_alive
+
 load_dotenv()
 
 print("Lancement du bot...")
@@ -58,4 +60,7 @@ async def banguy(interaction: discord.Interaction, member: discord.Member):
 async def ping(interaction: discord.Interaction):
     await interaction.response.send_message("Pong!")
 
+keep_alive()
+
 bot.run(os.getenv('DISCORD_TOKEN'))
+
