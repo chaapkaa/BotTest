@@ -28,7 +28,7 @@ async def on_message(message: discord.Message):
     if message.content == 'Bonjour':
         channel = message.channel
         author = message.author
-        await author.send("Comment ça va ?")
+        await channel.send("Comment ça va ?")
     if message.content == 'Bienvenue':
         welcome_channel = bot.get_channel (1421942767281770546)
         await welcome_channel.send(f"Bienvenue {message.author.mention} !")
